@@ -1,0 +1,311 @@
+.Hero-body {
+  .hero-div {
+    width: 100%;
+    height: 600px;
+    top: 100px;
+    gap: 0px;
+    border: 0px 0px 1px 0px;
+
+    // background-color: rgb(215, 238, 238);
+    // border-bottom: 1px solid #0000001A !important;
+
+    opacity: 0px;
+    padding-top: 15px;
+
+    .hero-heading {
+      text-align: center;
+
+
+      p {
+        font-family: "Inter";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+
+        padding-top: 10px;
+        background: linear-gradient(to right, #0554F2 0%, #05CBF2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+      }
+    }
+
+    .hero-main-heading {
+      width: 32.5%;
+      margin: auto;
+      // background-color: #0554F2;
+
+
+      h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 40px;
+
+        font-weight: 500;
+        line-height: 45px;
+        text-align: left;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        color: #666666;
+      }
+    }
+
+    .imagebanner {
+      width: 100%;
+      // background-color: #05CBF2 !important;
+      height: auto;
+
+      .imageside {
+        // background-color: coral;
+        text-align: end;
+        padding-top: 40px;
+
+        img {}
+      }
+
+      .font-side {
+        // background-color: rgba(255, 127, 80, 0.601);
+        height: auto;
+        margin: auto;
+
+        .paragraph {
+          width: 520px;
+          height: 88px;
+          padding-top: 70px;
+          left: 746px;
+          gap: 0px;
+          opacity: 0px;
+
+          p {
+            font-family: "Inter";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 21.78px;
+            text-align: left;
+            color: #86868B;
+            width: 100%;
+            margin-left: 40px;
+
+          }
+        }
+
+        .buttons {
+          padding-top: 110px;
+
+          button {
+
+            background-color: transparent;
+            border: 1px solid #05CBF2;
+            font-family: "Inter";
+            font-size: 15px;
+            color: #0554F2;
+            padding: 5px 10px;
+            margin-left: 40px;
+            font-weight: 300;
+            line-height: 18.15px;
+            text-align: left;
+
+          }
+        }
+      }
+
+    }
+
+
+
+
+  }
+
+ #enguiryy-iitems {
+    margin-top: -35px !important;
+    width: 980px;
+    height: 70px;
+    background: linear-gradient(90deg, #05CBF2 0%, #2F73FB 100%);
+    margin: auto;
+    gap: 0px;
+    border-radius: 10px;
+    // position: absolute;
+    // opacity: 0px;
+    // top: 104%;
+    // left: 50%;
+    // transform: translate(-50%);
+
+  }
+
+  .underline {
+    width: 100%;
+    // border-bottom: 1px solid #0000001A !important;
+    // position: relative;
+
+  }
+
+  #sociel-enquery {
+    padding-top: 11px;
+    margin: auto;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  #sociel {
+    width: 32%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+
+    padding: 10px;
+
+
+    span {
+      margin-left: 10px;
+    }
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+// media query
+@media(min-width:300px) and (max-width:575px) 
+{
+  .Hero-body {
+   
+
+    // background-color: #05CBF2;
+    .hero-div {
+      width: 100% !important;
+      top: 100px;
+      gap: 0px;
+      border: 0px 0px 1px 0px;
+
+      // background-color: rgb(215, 238, 238);
+      // border-bottom: 1px solid #0000001A !important;
+
+      opacity: 0px;
+      padding-top: 15px;
+
+      .hero-heading {
+        text-align: center;
+
+
+        p {
+          font-family: "Inter";
+          font-size: 13px;
+          font-weight: 400;
+          width: 100%;
+          line-height: 19.36px;
+          text-align: center !important;
+          padding-top: 15px;
+          background: linear-gradient(to right, #0554F2 0%, #05CBF2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+        }
+      }
+    }
+  }
+
+
+  .hero-main-heading {
+    width: 100% !important;
+    margin: auto !important;
+    // background-color: #0554F2;
+
+
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 26px !important;
+
+      font-weight: 600 !important;
+      line-height: 45px;
+      text-align: center !important;
+      margin-bottom: 0 !important;
+      margin-top: 0 !important;
+      color: #666666;
+    }
+  }
+
+
+  .imagebanner {
+    width: 100% !important;
+    // background-color: #05CBF2 !important;
+    height: auto;
+
+    .imageside {
+      // background-color: coral;
+      text-align: center !important;
+      padding-top: 40px !important;
+
+      img {
+        width: 90% !important;
+      }
+    }
+
+    .font-side {
+      // background-color: rgba(255, 127, 80, 0.601);
+      height: auto;
+
+      .paragraph {
+        width: 100% !important;
+        height: 128px !important;
+        padding-top: 50px !important;
+        text-align: center !important;
+
+        p {
+          font-family: "Inter";
+
+          font-size: 15px !important;
+          font-weight: 400;
+
+          text-align: center !important;
+          color: #86868B;
+          width: 90% !important;
+          margin: auto !important // margin-left: 5px !important;
+
+        }
+      }
+
+      .buttons {
+        padding-top: 60px !important;
+        // background-color: #2F73FB !important;
+        margin-bottom: 80px !important;
+        text-align: center !important;
+        width: 100% !important;
+
+
+        button {
+
+          background-color: transparent;
+          border: 1px solid #05CBF2;
+          font-family: "Inter";
+          font-size: 15px;
+          color: #0554F2;
+          padding: 5px 10px;
+          margin-left: 10px !important;
+          font-weight: 300;
+
+          text-align: center !important;
+
+        }
+      }
+    }
+    #sociel-enquery{
+      width: 90px !important;
+      background-color: red !important
+    }
+
+  }
+
+  #enguiryy-iitems{
+    width: 90% !important;
+    height: auto;
+    margin-top: 60px !important;
+    padding-bottom: 10px;
+      }
+      #sociel{
+        width: 94% !important;
+      }
+
+}
+.underline{
+  display: none !important;
+}
+}
+

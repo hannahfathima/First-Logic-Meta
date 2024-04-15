@@ -1,0 +1,142 @@
+.services-main-div{
+    .our-services{
+        // background-color: red;
+        padding-left: 30px;
+        width: 1266px;
+        margin: auto;
+        p{
+            margin-top: 30px !important;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.36px;
+            text-align: left;
+            background: linear-gradient(to right, #0554F2 0%, #05CBF2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .offer-heading{
+        p{
+            margin-bottom: 30px !important;
+            background: linear-gradient(to right, #0554F2 0%, #05CBF2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: Inter;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 36.31px;
+            text-align: left;
+            padding-left: 30px;
+            // background-color: red;
+            width: 1266px;
+            margin: auto;
+        }
+    }
+    .servicee-caard{
+        width: 1266px;
+        margin: auto;
+        border-radius: 10px;
+        padding: 40px;
+        padding-left: 60px;
+        background-color: rgba(51, 51, 51, 1);
+    }
+    .caards-list{
+        // background-color: red;
+        // width: 95%;
+        margin: auto;
+    }
+    .maiin-1-rowws{
+        // padding-left: 10px;
+        margin: auto !important;
+    }
+    .rowws-1{
+      .caard-in-imagee{
+        width: 343px;
+        height: 200px;
+        // background-color: red;
+      }
+      .p-headinggs{
+        p{  
+            margin-top: 20px;
+            font-family: Inter;
+            font-size: 15px;
+            font-weight: 300;
+            text-align: left;
+            background: linear-gradient(to right, rgba(5, 203, 242, 1),rgba(5, 84, 242, 1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+      }
+      .p-onlyy{
+        p{
+            color: rgba(134, 134, 139, 1);
+            width: 300px;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            text-align: left;
+
+        }
+      }
+    }
+
+    @media(min-width:300px) and (max-width:575px) {
+
+        .maiin-1-rowws {
+            margin: 10px !important;
+        }
+        .our-services{
+            width: 100%;
+            padding-left: 0px;
+            p{
+                text-align: center;
+                padding-left: 0 !important;
+                background-color: red !important;
+            }
+        }
+      .services-sub-div{
+        padding-top: 20px !important;
+
+
+        .offer-heading{
+            width: 90% !important;
+            margin: auto;
+            // background-color: #05CBF2;
+            p{
+                text-align: center;
+                padding-left: 0 !important;
+                width:100%;
+                font-size: 28px;
+            }
+        }
+        .servicee-caard {
+            width: 95% !important;
+            margin: auto !important;
+            border-radius: 10px;
+            padding: 0px !important;
+            padding-top: 10px !important;
+            // padding-left: 2px !important;
+            background-color: rgb(51, 51, 51);
+
+
+            .services-main-div
+            {
+                .rowws-1 {
+                   
+                    background-color: aqua;
+                    .caard-in-imagee {
+                        width: 100% !important;
+                        /* height: 200px; */
+                        img{
+                            width: 100% !important;
+                        }
+                    }
+                }
+          }
+        }  
+      }
+        
+    }
+}
