@@ -183,7 +183,44 @@
     }
   }
 
+  
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(-90px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  // .hero-main-heading {
+  //   animation: slideInFromLeft 1s ease-in-out forwards;
+  // }
 
+  
+  
+  .imageside {
+    animation: slideInFromRight 1s ease-in-out forwards;
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .font-side {
+    animation: slideInFromLeft 1s ease-in-out forwards;
+  }
+  
+  
   // @keyframes slideInLeft {
   //   0% {
   //     transform: translateX(-100%);

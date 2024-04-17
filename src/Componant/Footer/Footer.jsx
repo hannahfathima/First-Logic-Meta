@@ -131,7 +131,7 @@ const Footer = () => {
        </div>
 
        <div className="div-foot-last-icon">
-        <img src="/public/up-chevron 1.svg" alt="" />
+       <a href="#"> <img src="/public/up-chevron 1.svg" alt="" /></a>
        </div>
      </div>
     </div>
