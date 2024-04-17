@@ -1,5 +1,5 @@
-import React from 'react'
-import './Hero.scss'
+import React from 'react';
+import './Hero.scss';
 
 const Hero = () => {
   return (
@@ -17,8 +17,6 @@ const Hero = () => {
           </div>
         </div>
 
-
-
         {/* ....................Imagebannerdiv............ */}
 
         <div className="imagebanner">
@@ -29,39 +27,35 @@ const Hero = () => {
               </div>
               <div className="col-lg-6 font-side">
                 <div className="paragraph">
-                  <p>Our user-centered design approach creates software solutions that are easy to use and deliver maximum impact. Our focus on user experienceensure that our software solutions meet the needs of both businesses and end-users.</p>
+                  <p>Our user-centered design approach creates software solutions that are easy to use and deliver maximum impact. Our focus on user experience ensures that our software solutions meet the needs of both businesses and end-users.</p>
                 </div>
                 <div className="buttons">
-                  <button>Get Details</button>
+                <button className="button">Get Details</button>
+
                 </div>
               </div>
-            </div> </div>
+            </div>
+          </div>
         </div>
-
       </div>
 
-      <div className="underline">
+      <div className="underline"></div>
 
-      </div>
-      <div  id='enguiryy-iitems'>
-          <div className="row" id='sociel-enquery'>
-            <div
-             className="col-lg-4 col-md-4 col-sm-12"
-              id='sociel'>
-              <img src="/public/2-mobile 1.svg" alt="" /><span>+91 7012 48 38 28</span>
-            </div>
-            <div className="col-lg-4 col-md-4 col-sm-12" id='sociel'>
-              <img src="/public/3-mail 1.svg" alt="" /><span>Info@firstlogicmetalab.com</span>
-            </div>
-            <div className="col-lg-4 col-sm-12" id='sociel'>
-              <img src="/public/1-time 1.svg" alt="" /><span>9am - 6pm (Mon - Sat)</span>
-            </div>
+      <div id='enguiryy-iitems'>
+        <div className="row" id='sociel-enquery'>
+          <div className="col-lg-4 col-md-4 col-sm-12" id='sociel'>
+            <img src="/public/2-mobile 1.svg" alt="" /><span>+91 7012 48 38 28</span>
+          </div>
+          <div className="col-lg-4 col-md-4 col-sm-12" id='sociel'>
+            <img src="/public/3-mail 1.svg" alt="" /><span>Info@firstlogicmetalab.com</span>
+          </div>
+          <div className="col-lg-4 col-sm-12" id='sociel'>
+            <img src="/public/1-time 1.svg" alt="" /><span>9am - 6pm (Mon - Sat)</span>
+          </div>
         </div>
       </div>
     </div>
-
-
-  )
+  );
 }
 
-export default Hero
+export default Hero;
