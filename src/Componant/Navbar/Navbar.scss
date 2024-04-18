@@ -56,7 +56,10 @@
         height: 93px;
         gap: 0px;
         border-bottom: 1px solid#0000001A;
-      ;
+      
+        .naav-iccon{
+            border: none;
+         }
         
         .imgg-div-navv{
             // background-color: bisque;
@@ -99,6 +102,10 @@
         #main-navbar-bodyy{
             width: 100% !important;
             height: auto !important;
+                    
+        .naav-iccon{
+            border: none;
+         }
             // background-color: #05CBF2;
        
             padding-top: 20px !important;
@@ -110,10 +117,41 @@
                 padding-left: 20px !important;
                 width: 60%;
                 img{
-                    width: 100%;
+                    width: 90%;
                 }
             }
     }
     
 
-}}
+}
+
+
+@media(min-width:576px) and (max-width:768px) {
+    #main-navbar-bodyy{
+        width: 90% !important;
+        height: auto !important;
+        // background-color: #05CBF2;
+   
+        padding-top: 20px !important;
+        // background-color: aqua;
+        border-bottom:none;
+
+        .naav-iccon{
+           border: none;
+        }
+               
+        .imgg-div-navv{
+            // background-color: bisque;
+            padding-left: 20px !important;
+            width: 60%;
+            img{
+                width: 60%;
+            }
+        }
+}
+
+
+}
+
+}
+

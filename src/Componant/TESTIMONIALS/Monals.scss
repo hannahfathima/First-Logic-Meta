@@ -235,4 +235,36 @@ text-align: left;
               
         }
     }
+
+    @media(min-width:576px) and (max-width:768px) {
+        .Monals-body{
+            margin-top: 20px;
+            height: 50rem !important;
+            // background-color: #0554F2;
+              .monals-bodu-contents 
+              {
+                .monalss-caards{
+                    .monaals-roww{
+                        .monals-columns {
+                            width: 260.82px;
+                            background-color: rgb(31, 50, 66);
+                            margin: auto;
+                            margin-bottom: 20px;
+                            height: 270px;
+                            border-radius: 10px;
+                            opacity: 0px;
+                        }
+                    }
+                } 
+              }
+              .monals-icon-2{
+                       img{
+                        transform: rotate(180deg);
+                        margin-top: 18rem;
+                       }
+              }
+          
+              
+        }
+    }
 }

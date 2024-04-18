@@ -53,6 +53,7 @@ const Hero = () => {
             <img src="/public/1-time 1.svg" alt="" /><span>9am - 6pm (Mon - Sat)</span>
           </div>
         </div>
+      
       </div>
     </div>
   );

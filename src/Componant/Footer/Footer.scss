@@ -337,4 +337,184 @@
 
 
     }
+
+
+
+
+    @media(min-width:576px) and (max-width:768px) {
+
+        .boott-main-body {
+
+            background-color: #19212E;
+            width: 100%;
+            height: 330px;
+            display: flex;
+            border-bottom: 1px solid wheat;
+    
+            .left-div {
+                width: 27%;
+                height: 350px;
+                text-align: left !important;
+                padding-top: 50px;
+                // background-color: aqua;
+                margin-left: 20px;
+    
+                .imaages {
+                    // margin: auto;
+                    width: 120px;
+                    height: 120px;
+    
+                    //    background-color: antiquewhite;
+                    gap: 0px;
+                    opacity: 0px;
+    
+                    img {
+                        width: 100%;
+                    }
+    
+                }
+    
+                .paaraa {
+                    width: 260px;
+                    // background-color: aqua;
+                    // margin: auto;
+                    height: 85px;
+                    padding-top: 20px;
+    
+                    p {
+                        font-family: "Inter";
+                        font-size: 16px;
+                        font-weight: 300;
+                        line-height: 16.94px;
+                        text-align: left;
+                        color: #86868B;
+    
+                    }
+                }
+    
+            }
+    
+            .rightt-divvv {
+                width: 100%;
+                text-align: center !important;
+                // background-color: #0554F2;
+                // margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+                // justify-content: space-around;
+                height: auto ;
+                align-items: center;
+                // background-color: #5c5cb6;
+                // margin-top: 70px;
+                padding-left: 20px;
+                padding-top: 50px;
+    
+                h6{
+                    font-family: "Inter";
+                    color: #86868B;
+                    font-size: 16px;
+                    font-weight: 400;
+                  
+                    text-align: center;
+    
+                }
+               ul{
+                list-style-type: none;
+              li{
+                padding: 5px;
+                a{
+                    text-decoration: none;
+                    font-family: "Inter";
+                    color: #86868B;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 16.94px;
+                    text-align: left;
+    
+                }
+              }
+               }
+    
+                .rowws1 {
+                    width: 100%;
+    
+    
+    
+                    a {
+                        font-family: "Inter";
+                        font-size: 16px;
+                        font-weight: 400;
+                        text-decoration: none;
+                        line-height: 19.36px;
+                        text-align: left;
+                        color: #86868B;
+    
+                    }
+    
+                    .coolss {
+                        // background-color: aquamarine;
+    
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 16.94px;
+                        text-align: left;
+                        color: #86868B;
+    
+                    }
+                }
+    
+                .rowws2 {
+                    width: 100%;
+                    // background-color: #86868B;
+                    margin-top: 30px;
+                    height: 4px;
+                    text-align: left;
+    
+                    a {
+                        font-family: "Inter";
+                        font-size: 14px;
+                        font-weight: 300;
+                        text-decoration: none;
+                        color: #86868B;
+                        text-align: left !important;
+    
+                    }
+                }
+            }
+    
+    
+    
+        }
+    
+
+
+    .div-foot-last {
+            width: 100%;
+            height: 9rem !important;
+            text-align: center !important;
+            display: block;
+           .div-foot-iconss {
+               background-color: #19212E;
+                justify-content: center;
+            }
+           
+             .div-foot-paara {
+                background-color: #19212E;
+               height: auto !important;
+                width: 100%;
+                p {
+                 
+                 padding: 3px 10px;
+                    text-align: center !important;
+                }
+             }
+        }
+        .div-foot-last-icon{
+         margin: auto !important;
+         
+        }
+
+
+    }
 }

@@ -236,4 +236,59 @@ height: auto !important;
 }}
     }      
 }
+
+}
+
+
+@media(min-width:576px) and (max-width:768px) {
+    .Case-study-main {
+
+        height: auto !important;
+                
+             
+                .case-study-div {
+                width: 100% !important;
+                // background-color: aqua !important;
+                height: auto !important;
+                margin: auto !important;
+                padding-top: 50px;
+        
+              .imgiss-caard {
+                    width: 85%;
+                    // margin: auto;
+                    height: auto !important;
+                  
+        
+                   .iimmgis {
+                        width: 271px;
+                        height: 290.67px;
+                        padding: 0px !important;
+                        border: 1px 0px 0px 0px;
+                        opacity: 0px;
+                    }
+                }
+        
+              
+             
+              
+            }
+        
+            .happy-clients{
+        //    background-color: #0554F2;
+           height: auto !important;
+        
+        
+          .happy-client-rowws {
+            margin-bottom: 20px;
+            .client-clumnss {
+            width: 290px;
+            height: 290px;
+           
+            padding-top: 110px;
+            margin-bottom: 20px !important;
+        
+        }}
+            }      
+        }  
+
 }

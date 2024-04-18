@@ -1,7 +1,71 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import './Study.scss'
 
 const Study = () => {
+
+  
+  const [stats, setStats] = useState({
+    happyClients: 0,
+    cupsOfCoffee: 0,
+    skilledExperts: 0,
+    mediaFollowers: 0
+  });
+
+
+  const statsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Start counting animation
+          startCountAnimation();
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, []);
+
+  const startCountAnimation = () => {
+    const counts = {
+      happyClients: 257,
+      cupsOfCoffee: 3840,
+      skilledExperts: 108,
+      mediaFollowers: 34365
+    };
+
+    const duration = 2000; // Duration of the animation in milliseconds
+    const interval = 50; // Interval between each count increase
+
+    Object.keys(counts).forEach((key) => {
+      const step = Math.ceil((counts[key] - stats[key]) / (duration / interval));
+      const timer = setInterval(() => {
+        setStats((prevStats) => ({
+          ...prevStats,
+          [key]: prevStats[key] + step
+        }));
+      }, interval);
+
+      // Clear the interval when count reaches the target
+      setTimeout(() => {
+        clearInterval(timer);
+        setStats((prevStats) => ({
+          ...prevStats,
+          [key]: counts[key]
+        }));
+      }, duration);
+    });
+  };
   return (
     <div className='Case-study-main'>
       <div className="case-study-div">
@@ -77,23 +141,23 @@ const Study = () => {
         </div>
       </div>
 
-      <div className="happy-clients">
+      <div className="happy-clients " ref={statsRef}>
         <div className="row happy-client-rowws">
           
             <div className="col-lg-3 client-clumnss">
-             <p className='t-f-s'>257</p>
+             <p className='t-f-s'>{stats.happyClients}</p>
              <p className='happy-clientsss'>Happy Clients</p>
             </div>
             <div className="col-lg-3 client-clumnss">
-             <p className='t-f-s'>3840</p>
+             <p className='t-f-s'>{stats.cupsOfCoffee}</p>
              <p className='happy-clientsss'> Cups of Coffee</p>
             </div>
             <div className="col-lg-3 client-clumnss">
-             <p className='t-f-s'>108 </p>
+             <p className='t-f-s'>{stats.skilledExperts} </p>
              <p className='happy-clientsss'>Skilled Experts</p>
             </div>
             <div className="col-lg-3 client-clumnss">
-             <p className='t-f-s'>34365</p>
+             <p className='t-f-s'>{stats.mediaFollowers}</p>
              <p className='happy-clientsss'> Media Followers</p>
             </div>
         </div>
