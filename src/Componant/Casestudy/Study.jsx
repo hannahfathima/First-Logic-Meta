@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Study.scss'
 
 const Study = () => {
-
-  
   const [stats, setStats] = useState({
     happyClients: 0,
     cupsOfCoffee: 0,
@@ -11,32 +9,36 @@ const Study = () => {
     mediaFollowers: 0
   });
 
-
-  const statsRef = useRef(null);
+  // Refs for each section
+  const happyClientsRef = useRef(null);
+  const cupsOfCoffeeRef = useRef(null);
+  const skilledExpertsRef = useRef(null);
+  const mediaFollowersRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
+    const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Start counting animation
-          startCountAnimation();
-          observer.unobserve(entry.target);
+          startCountAnimation(entry.target.dataset.stat);
         }
       });
-    });
+    };
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
-
-    return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current);
+    const observeSection = (ref) => {
+      if (ref.current) {
+        const observer = new IntersectionObserver(observerCallback);
+        observer.observe(ref.current);
+        return () => observer.disconnect();
       }
     };
+
+    observeSection(happyClientsRef);
+    observeSection(cupsOfCoffeeRef);
+    observeSection(skilledExpertsRef);
+    observeSection(mediaFollowersRef);
   }, []);
 
-  const startCountAnimation = () => {
+  const startCountAnimation = (stat) => {
     const counts = {
       happyClients: 257,
       cupsOfCoffee: 3840,
@@ -44,27 +46,25 @@ const Study = () => {
       mediaFollowers: 34365
     };
 
-    const duration = 2000; // Duration of the animation in milliseconds
-    const interval = 50; // Interval between each count increase
+    const duration = 2000;
+    const interval = 90;
 
-    Object.keys(counts).forEach((key) => {
-      const step = Math.ceil((counts[key] - stats[key]) / (duration / interval));
-      const timer = setInterval(() => {
-        setStats((prevStats) => ({
-          ...prevStats,
-          [key]: prevStats[key] + step
-        }));
-      }, interval);
+    const key = stat;
+    const step = Math.ceil((counts[key] - stats[key]) / (duration / interval));
+    const timer = setInterval(() => {
+      setStats((prevStats) => ({
+        ...prevStats,
+        [key]: prevStats[key] + step
+      }));
+    }, interval);
 
-      // Clear the interval when count reaches the target
-      setTimeout(() => {
-        clearInterval(timer);
-        setStats((prevStats) => ({
-          ...prevStats,
-          [key]: counts[key]
-        }));
-      }, duration);
-    });
+    setTimeout(() => {
+      clearInterval(timer);
+      setStats((prevStats) => ({
+        ...prevStats,
+        [key]: counts[key]
+      }));
+    }, duration);
   };
   return (
     <div className='Case-study-main'>
@@ -141,22 +141,22 @@ const Study = () => {
         </div>
       </div>
 
-      <div className="happy-clients " ref={statsRef}>
+      <div className="happy-clients " >
         <div className="row happy-client-rowws">
           
-            <div className="col-lg-3 client-clumnss">
+            <div className="col-lg-3 client-clumnss"ref={happyClientsRef} data-stat="happyClients">
              <p className='t-f-s'>{stats.happyClients}</p>
              <p className='happy-clientsss'>Happy Clients</p>
             </div>
-            <div className="col-lg-3 client-clumnss">
+            <div className="col-lg-3 client-clumnss" ref={cupsOfCoffeeRef} data-stat="cupsOfCoffee">
              <p className='t-f-s'>{stats.cupsOfCoffee}</p>
              <p className='happy-clientsss'> Cups of Coffee</p>
             </div>
-            <div className="col-lg-3 client-clumnss">
+            <div className="col-lg-3 client-clumnss"ref={skilledExpertsRef} data-stat="skilledExperts">
              <p className='t-f-s'>{stats.skilledExperts} </p>
              <p className='happy-clientsss'>Skilled Experts</p>
             </div>
-            <div className="col-lg-3 client-clumnss">
+            <div className="col-lg-3 client-clumnss" ref={mediaFollowersRef} data-stat="mediaFollowers">
              <p className='t-f-s'>{stats.mediaFollowers}</p>
              <p className='happy-clientsss'> Media Followers</p>
             </div>
