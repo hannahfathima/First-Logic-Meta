@@ -86,25 +86,77 @@
       
     }
 
-    @keyframes fadeOut {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      
-      .our-services{
-        p{
-            animation: fadeOut 9s ease-in-out forwards !important;  
-        }
-      } .offer-heading {
-        p {
-            animation: fadeOut 1s ease-in-out forwards;
-          }
-      }
-      
+    
+// Services.scss
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-sub-div {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.row.maiin-1-rowws {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rowws-1 {
+  margin-bottom: 30px;
+}
+
+.caard-in-imagee img {
+  max-width: 100%;
+  height: auto;
+}
+
+.p-headinggs {
+  margin-top: 20px;
+}
+
+
+.caard-in-imagee {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caard-in-imagee:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.caard-in-imagee::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // background-color: rgba(39, 38, 38, 0.079);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.caard-in-imagee:hover::before {
+  opacity: 9;
+}
+
+.p-headinggs p,
+.p-onlyy p {
+  transition: color 0.3s ease;
+}
+
+
 
 
 
