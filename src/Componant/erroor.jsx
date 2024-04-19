@@ -474,3 +474,79 @@ export default Study;
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+import React from 'react';
+import Slider from 'react-slick';
+import './Monals.scss';
+
+const Monals = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  };
+
+  return (
+    <div className='monalss'>
+      <div className="Monals-body">
+        <div className="monals-headingss">
+          <p>TESTIMONIALS</p>
+        </div>
+
+        <Slider {...settings}>
+          <div className="monals-columns" id='testi-caaard'>
+            {/* Content for Slide 1 */}
+          </div>
+          <div className="monals-columns" id='testi-caaard1'>
+            {/* Content for Slide 2 */}
+          </div>
+          <div className="monals-columns" id='testi-caaard2'>
+            {/* Content for Slide 3 */}
+          </div>
+          <div className="monals-columns" id='testi-caaard3'>
+            {/* Content for Slide 4 */}
+          </div>
+          {/* Add more slides as needed */}
+        </Slider>
+
+        <div className="monal-icon-lastt">
+          <div className="monals-icon-2">
+            <img src="/public/quote black 1.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Monals;

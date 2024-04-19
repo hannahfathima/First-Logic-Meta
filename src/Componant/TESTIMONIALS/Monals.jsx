@@ -1,6 +1,50 @@
 import React from 'react'
+import Slider from 'react-slick';
 import './Monals.scss'
+
+
+
 const Monals = () => {
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+            },
+          },
+
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+            },
+          },
+        ],
+      };
   return (
     <div className='monalss'>
        <div className="Monals-body">
@@ -16,7 +60,10 @@ const Monals = () => {
 
 <div className="monalss-caards">
     <div className="row monaals-roww">
-        <div className="col-lg-3 monals-columns" id='testi-caaard'>
+    <Slider {...settings}>
+    <div className="caaard-first" >
+
+<div className="col-lg-3 monals-columns" id='testi-caaard'>
                 <div className="contents-caards">
                     <div className="pro-pic-dv">
                         <div className="pro-pic">
@@ -38,6 +85,8 @@ const Monals = () => {
                     </div>
                 </div>
         </div>
+</div>
+        <div>
         <div className="col-lg-3 monals-columns" id='testi-caaard1'>
                 <div className="contents-caards">
                     <div className="pro-pic-dv">
@@ -60,8 +109,9 @@ const Monals = () => {
                     </div>
                 </div>
         </div>
+        </div>
 
-        <div className="col-lg-3 monals-columns" id='testi-caaard2'>
+ <div>       <div className="col-lg-3 monals-columns" id='testi-caaard2'>
                 <div className="contents-caards">
                     <div className="pro-pic-dv">
                         <div className="pro-pic">
@@ -83,7 +133,9 @@ const Monals = () => {
                     </div>
                 </div>
         </div>
+        </div>
 
+        <div>
         <div className="col-lg-3 monals-columns" id='testi-caaard3'>
                 <div className="contents-caards">
                     <div className="pro-pic-dv">
@@ -106,6 +158,8 @@ const Monals = () => {
                     </div>
                 </div>
         </div>
+        </div>
+        </Slider>
     </div>
 </div>
 

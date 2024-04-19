@@ -108,21 +108,22 @@ text-align: left;
 #testi-caaard{
     background: linear-gradient(180deg, #05CBF2 0%, rgba(5, 203, 242, 0.5) 100%);
        color: #000000;
+       padding-left: 10px !important;
 }
 #testi-caaard3{
    background-color: #FFFFFF;
-
+   padding-left: 10px !important;
 
 }
 #testi-caaard1{
     background-color: #48556A;
     color: #FFFFFF;
-
+    padding-left: 10px !important;
 }
 #testi-caaard2{
     background-color: #19212E;
     color: #86868B;
-   
+    padding-left: 10px !important;
 }
             .pro-pic-dv{
                 display: flex;
@@ -134,6 +135,7 @@ text-align: left;
 
                 .pro-pic{
                     padding-top: 5px;
+                    padding-left: 3px;
                  
                     width: 40.91px;
                     height: 40px;
@@ -195,7 +197,7 @@ text-align: left;
    
     .monals-icon-2{
 
-    
+        transform: rotate(180deg) !important;
         width: 64px;
         height: 64px;
    

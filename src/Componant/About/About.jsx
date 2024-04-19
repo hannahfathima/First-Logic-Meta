@@ -21,7 +21,7 @@ const About = () => {
                    <div className="caard">
                     <div className="exp-carrd">
                        <div className="exp-client-text">
-                        <p>Over 200+ Clients</p>
+                        <p>Over 200+ Clients</p>
                        </div>
                     </div>
                     <div className="exp-carrd2">

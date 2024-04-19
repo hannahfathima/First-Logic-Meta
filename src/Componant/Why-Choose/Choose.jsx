@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Choose.scss';
+import 'slick-carousel/slick/slick.css';
+import Slider from 'react-slick';
+
+import 'slick-carousel/slick/slick-theme.css';
 
 const Choose = () => {
   const [activeSection, setActiveSection] = useState('whyChoose');
@@ -7,6 +11,31 @@ const Choose = () => {
   const handleButtonClick = (section) => {
     setActiveSection(section);
   };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  };
+  
 
   return (
     <div className='why-choose-us'>
@@ -137,33 +166,33 @@ const Choose = () => {
       )}
 
       {activeSection === 'ourProducts' && (
-        <div className="our-products">
-          <div className="headd-box-whychoos">
-            <p>Our Products</p>
+      <div className="our-products">
+      <div className="headd-box-whychoos">
+        <p>Our Products</p>
+      </div>
+      <div className="our-prod-contents">
+        <Slider {...settings}>
+          <div className="image1">
+            <img src="/public/product1 1.svg" alt="" />
           </div>
-          <div className="our-prod-contents">
-              <div className="content-img-div">
-                <div className="image1">
-                 <img src="/public/product1 1.svg" alt="" />
-                </div>
-                <div className="image1">
-                <img src="/public/product2 1.svg" alt="" />
-                </div>
-                <div className="image1">
-                <img src="/public/product3 1.svg" alt="" />
-                </div>
-                <div className="image1">
-                <img src="/public/product4 1.svg" alt="" />
-                </div>
-                <div className="image1">
-                <img src="/public/product5 1.svg" alt="" />
-                </div>
-                <div className="image1">
-                <img src="/public/product6 1.svg" alt="" />
-                </div>
-              </div>
+          <div className="image1">
+            <img src="/public/product2 1.svg" alt="" />
           </div>
-        </div>
+          <div className="image1">
+            <img src="/public/product3 1.svg" alt="" />
+          </div>
+          <div className="image1">
+            <img src="/public/product4 1.svg" alt="" />
+          </div>
+          <div className="image1">
+            <img src="/public/product5 1.svg" alt="" />
+          </div>
+          <div className="image1">
+            <img src="/public/product6 1.svg" alt="" />
+          </div>
+        </Slider>
+      </div>
+    </div>
       )}
     </div>
   );
